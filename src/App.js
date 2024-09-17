@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import './css/App.css';
+import Header from './components/Header';
+import SampleUseState from './components/SampleUseState';
+import SampleUseRef from './components/SampleUseRef';
+import SampleUseEffect from './components/SampleUseEffect';
+import SampleUseContext from './components/SampleUseContext';
+import ParentComponent from './components/Cleanup Example/ParentComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<SampleUseState/>} />
+        <Route path='/useref' element={<SampleUseRef/>} />
+        <Route path='/useeffect' element={<SampleUseEffect/>} />
+        <Route path='/usecontext' element={<SampleUseContext/>} />
+        <Route path='/cleanup' element={<ParentComponent/>} />
+      </Routes>
+    </>
   );
 }
 
