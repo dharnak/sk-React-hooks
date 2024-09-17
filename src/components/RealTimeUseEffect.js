@@ -2,16 +2,18 @@ import React, {useState, useEffect} from 'react'
 
 const RealTimeUseEffect = () => {
     
-  const [fact, setFact] = useState(null)
+  const [advice, setAdvice] = useState(null)
+
+  const adviceAPI = 'https://api.adviceslip.com/advice'
 
   useEffect(()=>{
 
-    fetch('https://catfact.ninja/fact')
+    fetch(adviceAPI)
     .then(res=>res.json())
     .then(data=>{
-      console.log('data: ',data)
-      if(data.fact&&data.fact!==''){
-        setFact(data.fact)
+        console.log('Received Data: ',data)
+      if(data.slip&&data.slip.advice!==''){
+        setAdvice(data.slip.advice)
       }
     })
     .catch(err=>{
@@ -23,9 +25,9 @@ const RealTimeUseEffect = () => {
   return (
     <div style={{width: 'fit-content', margin: '30px auto'}}>
         {
-            (fact===null)?
+            (advice===null)?
             <p>Loading ...</p>:
-            <p><b>Fetched Fact: </b>{fact}</p>
+            <p><b>Fetched Data: </b>{advice}</p>
         }
     </div>
   )
