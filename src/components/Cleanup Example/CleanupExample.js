@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const CleanupExample = () => {
   useEffect(() => {
-    console.log('Effect runs');
+    console.log('Component Mounted');
 
     return () => {
       console.log('Cleanup');

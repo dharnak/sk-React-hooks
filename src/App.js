@@ -6,6 +6,7 @@ import SampleUseRef from './components/SampleUseRef';
 import SampleUseEffect from './components/SampleUseEffect';
 import SampleUseContext from './components/SampleUseContext';
 import ParentComponent from './components/Cleanup Example/ParentComponent';
+import RealTimeUseEffect from './components/RealTimeUseEffect';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/useeffect' element={<SampleUseEffect/>} />
         <Route path='/usecontext' element={<SampleUseContext/>} />
         <Route path='/cleanup' element={<ParentComponent/>} />
+        <Route path='/fetchfact' element={<RealTimeUseEffect/>} />
       </Routes>
     </>
   );
