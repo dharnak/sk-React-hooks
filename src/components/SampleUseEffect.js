@@ -21,7 +21,7 @@ const SampleUseEffect = () => {
 
   return (
     <div style={{width: 'fit-content', margin: '30px auto'}}>
-      <h2 className='mt-3'><u>useEffect Hook</u></h2>
+      <h2 className='mt-3'><u>useEffect HOOK</u></h2>
       <p>Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       
