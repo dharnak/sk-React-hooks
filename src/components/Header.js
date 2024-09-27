@@ -2,15 +2,30 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='d-flex justify-content-between align-items-center p-2 bg-primary text-light'>
-        <h1 className='fs-3'>React Hooks</h1>
-        <nav className="nav justify-content-end">
-            <a className="m-2 p-2 text-light" role='button' style={{textDecoration: 'none'}} href="/">useState</a>
-            <a className="m-2 p-2 text-light" role='button' style={{textDecoration: 'none'}} href="/useref">useRef</a>
-            <a className="m-2 p-2 text-light" role='button' style={{textDecoration: 'none'}} href="/useeffect">useEffect</a>
-            <a className="m-2 p-2 text-light" role='button' style={{textDecoration: 'none'}} href="/usecontext">useContext</a>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">useState</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/useref">useRef</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/useeffect">useEffect</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/usecontext">useContext</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 
