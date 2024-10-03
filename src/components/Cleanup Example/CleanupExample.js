@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CleanupExample = () => {
+
+  const [count, setCount] = useState('sk')
+  
   useEffect(() => {
     console.log('Component Mounted');
 
@@ -9,9 +12,20 @@ const CleanupExample = () => {
     };
   },[]); // Empty dependency array
 
+
+  useEffect(()=>{
+    console.log('Count value updated!')
+
+    return()=>{
+      console.log('Returning Count value updation!')
+    }
+  }, [count])
+
+
+  
   return (
     <div>
-      <p>This component will log to the console when mounted and unmounted.</p>
+      <p onClick={()=>setCount('arav')}>This component will log to the console when mounted and unmounted.{count}</p>
     </div>
   );
 };
