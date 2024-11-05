@@ -20,7 +20,7 @@ const SampleUseState = () => {
 
   return (
     <div className='text-center'>
-      <h2 className='mt-3'><u>useState Hook</u></h2>
+      <h2 className='mt-3'><u>useState Hooks</u></h2>
       <section className='p-3 d-flex flex-wrap justify-content-around'>
         <div className='border rounded p-5 m-2 col-11 col-md-10 col-lg-5 col-xl-4'>
           <h3>Js variable - Counter:</h3>
@@ -39,6 +39,9 @@ const SampleUseState = () => {
       <section>
         <button className='btn btn-outline-dark m-2' onClick={()=>window.location.href="/usestate-object"}>View Object Example</button>
         <button className='btn btn-outline-dark m-2' onClick={()=>window.location.href="/usestate-array"}>View Array Example</button>
+      </section>
+      <section>
+        <iframe src='https://www.instagram.com/san_group_23/?hl=en' ></iframe>
       </section>
 
     </div>
